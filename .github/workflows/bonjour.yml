@@ -7,7 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: ls -l
-      - run: |
-          sudo apt-get update
-          sudo apt-get install --yes cowsay
-      - run: cat README.md | cowsay
+      - run: cat README.md
+      - run: npm install
+      - run: npm run lint
